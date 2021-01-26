@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <a href="emails/add" class="btn btn-primary">Add Email Template</a>
+  <br /><br />
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">Type</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let email of emails">
+      <tr>
+        <th scope="row">{{ email.id }}</th>
+        <td>{{ email.signature }}</td>
+        <td>{{ email.body }}</td>
+        <td>{{ email.type }}</td>
+        <td><a class="btn btn-primary"> Update</a></td>
+        <td><a class="btn btn-danger" (click)="deleteEmail(email.id)"> Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

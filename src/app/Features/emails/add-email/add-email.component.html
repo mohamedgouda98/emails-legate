@@ -1,0 +1,30 @@
+<div class="container">
+  <h3>Add New Email Template</h3>
+
+  <div class="alert alert-success" role="alert" *ngIf="success">
+    {{ success }}
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <form #emailForm="ngForm" (ngSubmit)="onCreateEmail(emailForm.value)">
+        <div class="form-group">
+          <label for="signature">Signature</label>
+          <input type="text" class="form-control" id="signature" required ngModel name="signature" />
+        </div>
+
+        <div class="form-group">
+          <label for="body">Body</label>
+          <textarea class="form-control" id="body" required ngModel name="body"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="type">Type</label>
+          <input type="text" class="form-control" id="type" required ngModel name="type" />
+        </div>
+
+        <button class="btn btn-primary" type="submit" [disabled]="!emailForm.valid">Add Email</button>
+      </form>
+    </div>
+  </div>
+</div>
