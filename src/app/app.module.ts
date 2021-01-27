@@ -13,15 +13,13 @@ import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AddEmailComponent } from './Features/emails/add-email/add-email.component';
 import { UpdateEmailComponent } from './Features/emails/update-email/update-email.component';
-import { ContactsComponent } from './Features/contacts/contacts.component';
-import { AddContactComponent } from './Features/contacts/add-contact/add-contact.component';
 import { UpdateContactComponent } from './Features/contacts/update-contact/update-contact.component';
 import { EmailsModule } from '@app/Features/emails/emails.module';
 import { AddEmailModule } from '@app/Features/emails/add-email/add-email.module';
 import { ContactsModule } from '@app/Features/contacts/contacts.module';
 import { AddContactModule } from '@app/Features/contacts/add-contact/add-contact.module';
+import { GameModule } from '@app/Features/game/game.module';
 
 @NgModule({
   imports: [
@@ -39,6 +37,7 @@ import { AddContactModule } from '@app/Features/contacts/add-contact/add-contact
     AddEmailModule,
     AddContactModule,
     ContactsModule,
+    GameModule,
     HttpClientModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
